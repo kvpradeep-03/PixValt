@@ -51,7 +51,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false)
 
   return (
-    <AppBar sx={{ backgroundColor: theme.palette.primary.main, Color: theme.palette.primary.contrastText, position: 'static' }} >
+    <AppBar sx={{ backgroundColor: theme.palette.primary.main, Color: theme.palette.primary.contrastText, position: 'sticky' }} >
       <StyledToolbar> {/*Adds default margin and padding*/}
         <Typography variant='h6' sx={{ display: { xs: "none", sm: "block" } }}>PixValt</Typography>
         <PixIcon sx={{ display: { xs: "block", sm: "none" } }} />
