@@ -10,7 +10,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import { theme } from '../theme';
 import SwitchMode from './SwitchMode';
-const Sidebar = () => {
+const Sidebar = ({mode,setMode}) => {
   return (
     <>
       {/* flex={1}, flex={2}, etc., you're controlling how much space an item should take in relation to its siblings inside a flex container.
@@ -18,7 +18,7 @@ const Sidebar = () => {
       */
       }
 
-      <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block", backgroundColor: theme.palette.primary.main } }}>
+      <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block",} }}>
         <Box position={'fixed'}>
           <List>
             <ListItem disablePadding>
@@ -80,7 +80,7 @@ const Sidebar = () => {
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <SwitchMode />
+                  <SwitchMode setMode={setMode} mode={mode}/>
                 </ListItemIcon>
                 <ListItemText />
               </ListItemButton>

@@ -51,11 +51,11 @@ const Navbar = () => {
   const [open, setOpen] = useState(false)
 
   return (
-    <AppBar sx={{ backgroundColor: theme.palette.primary.main, Color: theme.palette.primary.contrastText, position: 'sticky' }} >
+    <AppBar sx={{bgcolor: 'background.default', color: 'text.primary', position: 'sticky' }} >
       <StyledToolbar> {/*Adds default margin and padding*/}
         <Typography variant='h6' sx={{ display: { xs: "none", sm: "block" } }}>PixValt</Typography>
         <PixIcon sx={{ display: { xs: "block", sm: "none" } }} />
-        <Search><InputBase placeholder='Search...' /></Search>
+        <Search sx={{border: '2px solid black'}}><InputBase placeholder='Search...' /></Search>
         <Icons>
           <Badge badgeContent={4} color="error">
             <MailIcon />

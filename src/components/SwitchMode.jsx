@@ -62,9 +62,9 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     },
 }));
 
-export default function SwitchMode() {
+export default function SwitchMode({ mode, setMode }) {
     return (
-        <FormGroup>
+        <FormGroup  onChange={e=>setMode(mode === 'light'? 'dark':'light')}>
             <FormControlLabel
                 control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
                 label="Dark/Light"

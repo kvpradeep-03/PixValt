@@ -15,7 +15,7 @@ export const theme = createTheme({
             contrastText: "#3c3c3c",   // text color that appears on top of `main`
         },
         success:{ 
-            main: "#3c3c3c",           // dark background
+            main: "#0b0b0b",           // dark background
             contrastText: "#ffffff",   // white text
         }
     }
