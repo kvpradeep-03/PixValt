@@ -67,7 +67,6 @@ export default function SwitchMode({ mode, setMode }) {
         <FormGroup  onChange={e=>setMode(mode === 'light'? 'dark':'light')}>
             <FormControlLabel
                 control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
-                label="Dark/Light"
             />
         </FormGroup>
     );

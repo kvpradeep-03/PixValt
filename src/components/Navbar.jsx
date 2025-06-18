@@ -1,9 +1,12 @@
-import { AppBar, Box, InputBase, styled, Toolbar, Typography, Badge, Avatar, Menu, MenuItem} from '@mui/material'
+import { AppBar, Box, InputBase, styled, Toolbar, Typography, Badge, Avatar, Menu, MenuItem } from '@mui/material'
 import React, { useState } from 'react'
 import PixIcon from '@mui/icons-material/Pix';
 import MailIcon from '@mui/icons-material/Mail';
 import { theme } from '../theme';
 import { Notifications } from '@mui/icons-material';
+import SwitchMode from './SwitchMode';
+import Add from './Add';
+import App from '../App';
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
@@ -46,16 +49,16 @@ const UserBox = styled(Box)(({ theme }) => ({
 }));
 
 
-const Navbar = () => {
+const Navbar = ({ mode, setMode }) => {
 
   const [open, setOpen] = useState(false)
 
   return (
-    <AppBar sx={{bgcolor: 'background.default', color: 'text.primary', position: 'sticky' }} >
+    <AppBar sx={{ bgcolor: 'background.default', color: 'text.primary', position: 'sticky' }} >
       <StyledToolbar> {/*Adds default margin and padding*/}
         <Typography variant='h6' sx={{ display: { xs: "none", sm: "block" } }}>PixValt</Typography>
         <PixIcon sx={{ display: { xs: "block", sm: "none" } }} />
-        <Search sx={{border: '2px solid black'}}><InputBase placeholder='Search...' /></Search>
+        <Search sx={{ border: '2px solid black' }}><InputBase placeholder='Search...' /></Search>
         <Icons>
           <Badge badgeContent={4} color="error">
             <MailIcon />
@@ -84,7 +87,7 @@ const Navbar = () => {
         id="demo-positioned-menu"
         aria-labelledby="demo-positioned-button"
         open={open}
-        onClose={(e)=> setOpen(false)}
+        onClose={(e) => setOpen(false)}
         anchorOrigin={{
           vertical: 'top',
           horizontal: 'right',
@@ -97,8 +100,13 @@ const Navbar = () => {
         <MenuItem>Profile</MenuItem>
         <MenuItem>My account</MenuItem>
         <MenuItem>Logout</MenuItem>
+        <MenuItem sx={{ display: { xs: 'block', sm: 'none' } }}>
+          <SwitchMode setMode={setMode} mode={mode} />
+        </MenuItem>
       </Menu>
     </AppBar>
+
+
   )
 }
 
