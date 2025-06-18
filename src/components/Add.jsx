@@ -8,6 +8,7 @@ import InsertPhotoIcon from '@mui/icons-material/InsertPhoto';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import FileUploadIcon from '@mui/icons-material/FileUpload';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import HomeIcon from '@mui/icons-material/Home';
 
 const SytledModal = styled(Modal)({
     display: "flex",
@@ -34,10 +35,10 @@ const Add = () => {
                     bottom: 20,
                     left: { xs: "calc(50% - 25px)", md: 30 },
                     bgcolor: theme.palette.primary.main, 
-                    color: 'theme.palette.primary.contrastText'
+                    color: theme.palette.primary.contrastText
                 }}
             >
-                <Fab color="primary" aria-label="add">
+                <Fab color={theme.palette.primary.main} aria-label="add">
                     <AddIcon />
                 </Fab>
             </Tooltip>
@@ -83,7 +84,6 @@ const Add = () => {
                             Schedule
                         </Button>
                     </Stack>
-
 
                 </Box>
             </SytledModal>

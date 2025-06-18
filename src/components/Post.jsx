@@ -17,7 +17,7 @@ import { Margin } from '@mui/icons-material'
 import { theme } from '../theme'
 const Post = () => {
   return (
-      <Card sx={{ bgcolor: 'background.default', color: 'text.primary', margin: 5}}>
+      <Card sx={{ bgcolor: 'background.default', color: 'text.primary', margin: 3}}>
           <CardHeader
               avatar={
                   <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
