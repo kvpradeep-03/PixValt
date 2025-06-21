@@ -96,6 +96,7 @@ const Navbar = ({ mode, setMode }) => {
           vertical: 'top',
           horizontal: 'right',
         }}
+        disableScrollLock={true} // optional: avoids layout shifts , avoids padding issues when menu opens
       >
         <MenuItem>Profile</MenuItem>
         <MenuItem>My account</MenuItem>
